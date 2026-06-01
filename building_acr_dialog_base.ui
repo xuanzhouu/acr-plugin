@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BuildingACRDialogBase</class>
+ <widget class="QDialog" name="BuildingACRDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Urban-scale Building ACR</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin">
+    <number>16</number>
+   </property>
+   <property name="topMargin">
+    <number>16</number>
+   </property>
+   <property name="rightMargin">
+    <number>16</number>
+   </property>
+   <property name="bottomMargin">
+    <number>16</number>
+   </property>
+   <property name="spacing">
+    <number>10</number>
+   </property>
+
+   <!-- Building layer -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutBuilding">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text1">
+       <property name="text">
+        <string>Building data (shapefile)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBuildingLayer">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Weather folder -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutWeather">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text3_2">
+       <property name="text">
+        <string>Select weather folder (folder) wth</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layoutWeatherRow">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEditWeatherFolder"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnBrowseWeatherFolder">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Facade temp -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutFacade">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text3_3">
+       <property name="text">
+        <string>Select facade temp file (csv)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layoutFacadeRow">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEditFacadeTemp"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnBrowseFacadeTemp">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Internal temp -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutTin">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text3_9">
+       <property name="text">
+        <string>Select Tin folder (folder)_cvf</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layoutTinRow">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEditTinFolder"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnBrowseTinFolder">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- ACR model -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutModel">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text3_4">
+       <property name="text">
+        <string>Select ACR model</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboSimulator">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>22</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>CONTAM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3ZLPM</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Output folder -->
+   <item>
+    <layout class="QVBoxLayout" name="layoutOutput">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_text3">
+       <property name="text">
+        <string>Select output folder (folder)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layoutOutputRow">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEditOutputFolder"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnBrowseOutputFolder">
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Spacer -->
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+
+   <!-- Run button -->
+   <item>
+    <layout class="QHBoxLayout" name="layoutRun">
+     <item>
+      <spacer name="runSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRun">
+       <property name="text">
+        <string>Run</string>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>93</width>
+         <height>28</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="runSpacer2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

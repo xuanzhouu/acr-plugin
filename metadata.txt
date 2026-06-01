@@ -1,0 +1,48 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Building ACR
+qgisMinimumVersion=3.0
+description=A QGIS-based plugin for calculating building- and climate-specific hourly Air Change Rates (ACR) at urban scale, integrating wind speed correction and the 3ZLPM model for improved infiltration modelling in UBEM applications.
+version=0.1
+author=Yasemin Usta; Xuan Zhou; Guglielmina Mutani
+email=yasemin.usta@polito.it; xuan.zhou@polito.it; guglielmina.mutani@polito.it
+
+about=This plugin computes hourly building- and climate-specific Air Change Rates (ACR) to improve infiltration modelling in Urban Building Energy Modelling (UBEM). It integrates wind speed corrections at facade level using urban canyon algorithms, outdoor temperature correction via the Urban Weather Generator (UWG/UMEP), and hourly ACR simulation using a Three-Zone Lumped Parameter Model (3ZLPM) or CONTAM. Inputs include building geometry, air permeability, roughness length, and hourly weather data.
+
+
+tracker=https://github.com/xuanzhouu/acr-plugin/issues
+repository=https://github.com/xuanzhouu/acr-plugin
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python
+
+homepage=https://acr-plugin-docs.readthedocs.io
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+

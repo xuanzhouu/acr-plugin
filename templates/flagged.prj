@@ -1,0 +1,259 @@
+ContamW 3.4.0.6 0
+
+! rows cols ud uf    T   uT     N     wH  u  Ao    a
+   100  200  0  0 293.150 2    0.00 26.84 0 0.350 0.400
+!  scale     us  orgRow  orgCol  invYaxis showGeom
+  5.000e-01   0      90       1     0        1
+! Ta       Pb      Ws    Wd    rh  day u..
+263.150 101325.0  0.100 180.0 0.000 1 2 0 0 1 ! steady simulation
+263.150 101325.0  0.100 180.0 0.000 1 2 0 0 1 ! wind pressure test
+@(Quarter_path)C:\Users\yasmi\OneDrive\Masaüstü\ACR_thesis\CONTAM\Databases\WTH\LivingLab_22-23.wth ! weather file
+null ! no contaminant file
+@(Tin)C:\Users\yasmi\OneDrive\Masaüstü\ACR_modeling\CONTAM\Databases\Tempin.cvf ! continuous values file
+null ! no discrete values file
+null ! no WPC file
+null ! no EWC file
+WPC description
+!  Xref    Yref    Zref   angle u
+   0.000   0.000   0.000   0.00 0
+! epsP epsS  tShift  dStart dEnd wp mf wpctrig
+  0.01 0.01 00:00:00   1/1   1/1  0  0  0
+! latd  longtd   tznr  altd  Tgrnd u..
+ 45.07    7.69   1.00   239 283.15 2 0
+!sim_af afcalc afmaxi afrcnvg afacnvg afrelax uac Pbldg uPb
+     1      1     30   1e-05   1e-06    0.75   0 50.00   0
+!   slae rs aflmaxi aflcnvg aflinit Tadj
+      0   1    100   1e-06      1    0
+!sim_mf slae rs maxi   relcnvg   abscnvg relax gamma ucc
+    0             30  1.00e-04  1.00e-15 1.250         0 ! (cyclic)
+          0   1  100  1.00e-06  1.00e-15 1.100 1.000   0 ! (non-trace)
+          0   1  100  1.00e-06  1.00e-15 1.100 1.000   0 ! (trace)
+          0   1  100  1.00e-06  1.00e-15 1.100         0 ! (cvode)
+!mf_solver sim_1dz sim_1dd   celldx  sim_vjt udx
+     0        1       0     1.00e-01    0     0
+!cvode    rcnvg     acnvg    dtmax
+   0     1.00e-06  1.00e-13   0.00
+!tsdens relax tsmaxi cnvgSS densZP stackD dodMdt
+   0    0.75    20     1      0      0      0
+!date_st time_st  date_0 time_0   date_1 time_1    t_step   t_list   t_scrn
+  Jan01 00:00:00  Jan01 00:00:00  Dec31 24:00:00  01:00:00 01:00:00 01:00:00
+!restart  date  time
+    0    Jan01 00:00:00
+!list doDlg pfsave zfsave zcsave
+   1     1      1      1      0
+!vol ach -bw cbw exp -bw age -bw
+  0   1   0   0   0   0   0   0
+!rzf rzm rz1 csm srf log
+  0   0   0   1   1   1
+!bcx dcx pfq zfq zcq
+  0   0   0   0   0
+!dens   grav
+ 1.2041 9.8055
+! 0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 <- extra[]
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+0 ! rvals:
+!valZ valD valC
+   0    0    0
+!cfd   cfdcnvg  var zref maxi dtcmo solv smooth   cnvgUVW     cnvgT
+   0  1.00e-02    0    0 1000     1    1      1  1.00e-03  1.00e-03
+-999
+0 ! contaminants:
+0 ! species:
+-999
+3 ! levels plus icon data:
+! #  refHt   delHt  ni  u  name
+  1   0.000  @(delHt)12.075 14 0 0 <lower_level>
+!icn col row  #
+  14  57  11   0
+  23  70  11   8
+  19  87  11   0
+  23  92  11   9
+  19 102  11   0
+  15 130  11   0
+   5  58  13   3
+   5  89  13   4
+  17  87  30   0
+  23  94  30  10
+  16 102  30   0
+  17  57  51   0
+  23  70  51  11
+  16 130  51   0
+  2  @(refHt_2)12.075  @(delHt)12.075 15 0 0 <upper_level>
+!icn col row  #
+  14  57  11   0
+  23  70  11   3
+  19  87  11   0
+  23  92  11   4
+  19 102  11   0
+  15 130  11   0
+   5  58  13   1
+   5  89  13   2
+  25  94  21   5
+  17  87  30   0
+  23  94  30   6
+  16 102  30   0
+  17  57  51   0
+  23  70  51   7
+  16 130  51   0
+  3  @(refHt_roof)24.150   2.000 2 0 0 <roof>
+!icn col row  #
+  23  71  20   1
+  23  89  20   2
+-999
+0 ! day-schedules:
+-999
+0 ! week-schedules:
+-999
+6 ! wind pressure profiles:
+1 9 2 LowRoof04
+Lowrise roof, L/W=1, exposed, pitch 11-30 deg
+   0.0   -0.4
+  45.0   -0.5
+  90.0   -0.6
+ 135.0   -0.5
+ 180.0   -0.4
+ 225.0   -0.5
+ 270.0   -0.6
+ 315.0   -0.5
+ 360.0   -0.4
+2 13 1 Reference
+Wind modifer(Swami & Chandra)
+   0.0  0.603
+  30.0  0.457
+  60.0  0.056
+  90.0 -0.487
+ 120.0  -0.63
+ 150.0 -0.313
+ 180.0 -0.204
+ 210.0 -0.313
+ 240.0  -0.63
+ 270.0 -0.487
+ 300.0  0.056
+ 330.0  0.457
+ 360.0  0.603
+3 13 1 V1
+V1 from UMEP
+   0.0      @(m1_0)1
+  30.0      @(m1_30)1
+  60.0      @(m1_60)0
+  90.0      @(m1_90)0
+ 120.0      @(m1_120)0
+ 150.0      @(m1_150)0
+ 180.0      @(m1_180)0
+ 210.0      @(m1_210)0
+ 240.0      @(m1_240)0
+ 270.0      @(m1_270)0
+ 300.0      @(m1_300)0
+ 330.0      @(m1_330)0
+ 360.0      @(m1_360)1
+4 13 1 V2
+V2 from UMEP
+   0.0      @(m2_0)1
+  30.0      @(m2_30)1
+  60.0      @(m2_60)0
+  90.0      @(m2_90)0
+ 120.0      @(m2_120)0
+ 150.0      @(m2_150)0
+ 180.0      @(m2_180)0
+ 210.0      @(m2_210)0
+ 240.0      @(m2_240)0
+ 270.0      @(m2_270)0
+ 300.0      @(m2_300)0
+ 330.0      @(m2_330)0
+ 360.0      @(m2_360)1
+5 13 1 V3
+V3 from UMEP
+   0.0      @(m3_0)1
+  30.0      @(m3_30)1
+  60.0      @(m3_60)0
+  90.0      @(m3_90)0
+ 120.0      @(m3_120)0
+ 150.0      @(m3_150)0
+ 180.0      @(m3_180)0
+ 210.0      @(m3_210)0
+ 240.0      @(m3_240)0
+ 270.0      @(m3_270)0
+ 300.0      @(m3_300)0
+ 330.0      @(m3_330)0
+ 360.0      @(m3_360)1
+6 13 1 V4
+V4 from UMEP
+   0.0      @(m4_0)1
+  30.0      @(m4_30)1
+  60.0      @(m4_60)0
+  90.0      @(m4_90)0
+ 120.0      @(m4_120)0
+ 150.0      @(m4_150)0
+ 180.0      @(m4_180)0
+ 210.0      @(m4_210)0
+ 240.0      @(m4_240)0
+ 270.0      @(m4_270)0
+ 300.0      @(m4_300)0
+ 330.0      @(m4_330)0
+ 360.0      @(m4_360)1
+-999
+0 ! kinetic reactions:
+-999
+0 ! filter elements:
+-999
+0 ! filters:
+-999
+0 ! source/sink elements:
+-999
+3 ! flow elements:
+1 23 plr_leak3 Masonry_wall
+
+ 3.54137e-08 0.000303486 0.65  1 4 0 0 @(ELA)0.0002642 2 2 2 0
+2 23 plr_orfc door_undercut
+
+ 9.58578e-05 0.0197079 0.5 0.023226 0.171966 0.6 30 0 0
+3 25 plr_stair stairwell
+
+ 0.551994 6.86249 0.5 @(delHt)6 @(stair_area)16.24 0 0 0 0
+-999
+0 ! duct elements:
+-999
+0 ! control super elements:
+-999
+0 ! control nodes:
+-999
+0 ! simple AHS:
+-999
+4 ! zones:
+! Z#  f  s#  c#  k#  l#  relHt    Vol  T0  P0  name  clr uH uT uP uV axs cdvf <cdvfName> cfd <cfdName> <1dData:>
+   1  3   0   0   0   2   0.000 @(vol_b)1185.45 293.15 0 zone_b -1 0 2 0 0 0 1 Tin_(K) 0
+   2 19   0   0   0   2   0.000 @(vol_c2)183.54 275.15 0 zone_c 75 0 2 0 0 0 1 Tshaft_(K) 0
+   3  3   0   0   0   1   0.000 @(vol_a)1185.45 293.15 0 zone_a -1 0 2 0 0 0 1 Tin_(K) 0
+   4 19   0   0   0   1   0.000 @(vol_c1)183.54 275.15 0 zone_c 14 0 2 0 0 0 1 Tshaft_(K) 0
+-999
+0 ! initial zone concentrations:
+-999
+11 ! flow paths:
+! P#    f  n#  m#  e#  f#  w#  a#  s#  c#  l#    X       Y      relHt  mult wPset wPmod wazm Fahs Xmax Xmin icn dir u[4] cdvf <cdvfName> cfd <cfdData[4]>
+   1    1  -1   1   1   0   1   0   0   0   3   0.000   0.000   0.000 @(roof_leak_br)165.55 0 0.269875 0 0 0 0  23  6 -1 0 0 0 0 0 0
+   2    1  -1   2   1   0   1   0   0   0   3   0.000   0.000   0.000 @(roof_leak_cr)16.55 0 0.269875 0 0 0 0  23  6 -1 0 0 0 0 0 0
+   3    1  -1   1   1   0   6   0   0   0   2   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_b4)138.022 0 0.269875 @(Angle_3_4)350 0 0 0  23  4 26 0 0 0 0 0 0
+   4    1  -1   2   1   0   6   0   0   0   2   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_c4)43.47 0 0.269875 @(Angle_3_4)350 0 0 0  23  4 26 0 0 0 0 0 0
+   5    0   4   2   3   0   0   0   0   0   2   0.000   0.000   0.000 1 0 0 -1 0 0 0  25  3 -1 0 0 0 0 0 0
+   6    0   1   2   2   0   0   0   0   0   2   0.000   0.000   @(relHt_elmnt)6.038 @(shaft_mult)1 0 0 -1 0 0 0  23  1 16 0 0 0 0 0 0
+   7    1  -1   1   1   0   4   0   0   0   2   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_b2)181.492 0 0.269875 @(Angle_1_2)96 0 0 0  23  1 26 0 0 0 0 0 0
+   8    1  -1   3   1   0   5   0   0   0   1   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_a3)138.022 0 0.269875 @(Angle_3_4)350 0 0 0  23  4 26 0 0 0 0 0 0
+   9    1  -1   4   1   0   5   0   0   0   1   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_c3)43.47 0 0.269875 @(Angle_3_4)350 0 0 0  23  4 26 0 0 0 0 0 0
+  10    0   3   4   2   0   0   0   0   0   1   0.000   0.000   @(relHt_elmnt)6.038 @(shaft_mult)1 0 0 -1 0 0 0  23  1 16 0 0 0 0 0 0
+  11    1  -1   3   1   0   3   0   0   0   1   0.000   0.000   @(relHt_elmnt)6.038 @(wall_leak_a1)181.492 0 0.269875 @(Angle_1_2)96 0 0 0  23  1 26 0 0 0 0 0 0
+-999
+0 ! duct junctions:
+-999
+0 ! initial junction concentrations:
+-999
+0 ! duct segments:
+-999
+0 ! source/sinks:
+-999
+0 ! occupancy schedules:
+-999
+0 ! exposures:
+-999
+0 ! annotations:
+-999
+* end project file.
