@@ -26,7 +26,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=python
 
-homepage=https://acr-plugin-docs.readthedocs.io
+homepage=https://github.com/xuanzhouu/acr-plugin-docs
 category=Plugins
 icon=icon.png
 # experimental flag
